@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+:root {
+    --color-1: #EAEAEA;
+    --color-2: #F4F6F9;
+
+    --gradient-purple: linear-gradient(180deg, #020004 35%, #09051F 100%);
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+}
