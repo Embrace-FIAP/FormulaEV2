@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom/client';
 import App from './App.jsx'
 
 import Home from './routes/Home.jsx'
-import Racing from './routes/racing.jsx';
+import Leaderboard from './routes/Leaderboard.jsx'
+import Racing from './routes/racing.jsx'
 import Login from './routes/Login.jsx'
 
 const router = createBrowserRouter ([
@@ -15,7 +16,8 @@ const router = createBrowserRouter ([
     children:[
       {path:"/",element:<Home/>},
       {path:"/Login",element:<Login/>},
-      {path:"/Racing",element:<Racing/>}
+      {path:"/Racing",element:<Racing/>},
+      {path:"/Leaderboard",element:<Leaderboard/>}
     ]
   }
 ])
