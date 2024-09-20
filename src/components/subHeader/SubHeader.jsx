@@ -1,6 +1,7 @@
 import React from 'react'
 
-const NavTabs = ({ setActiveTab }) => {
+const SubHeader = ({ setActiveTab }) => {
+  
     return (
       <nav>
         <button onClick={() => setActiveTab('proximas')}>Próximas</button>
@@ -10,4 +11,4 @@ const NavTabs = ({ setActiveTab }) => {
     );
   };
 
-export default NavTabs
+export default SubHeader

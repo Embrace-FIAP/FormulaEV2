@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import NavTabs from '../components/navTabs';
-import RacingItems from '../components/RacingItems';
-import '../styles/index.css'
-import '../styles/racing.css';
+import NavTabs from '../../components/subHeader/SubHeader';
+import RacingItems from '../../components/racingItems/RacingItems';
+import '../../styles/index.css';
+import './racing.css';
 
 const data01 = [
   { id: 1, date: '17/09/2024', day: 'Ter', hour: '19:00 - 21:00', locality: '', bet: true },

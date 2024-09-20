@@ -3,10 +3,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx'
 
-import Home from './routes/Home.jsx'
-import Leaderboard from './routes/Leaderboard.jsx'
-import Racing from './routes/racing.jsx'
-import Login from './routes/Login.jsx'
+import Home from './routes/home/Home.jsx'
+import Leaderboard from './routes/leaderboard/Leaderboard.jsx'
+import Racing from './routes/racing/Racing'
+import Login from './routes/login/Login.jsx'
 
 const router = createBrowserRouter ([
   {
