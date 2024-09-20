@@ -1,0 +1,17 @@
+.subHeaderSection nav {
+    width: 40%;
+    background-color: var(--color-2);
+    padding: 8px 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.subHeaderSection nav button {
+    background-color: var(--color-1);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

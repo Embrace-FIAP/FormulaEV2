@@ -1,20 +1,15 @@
 .racingSection {
-    padding: 10% 30%;
-}
-
-.subHeader nav {
-    background-color: var(--color-2);
-    padding: 10px 25px;
-    border-radius: 5px;
-}
-
-.subHeader nav a {
     background-color: var(--color-1);
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.blockRacingItem {
+.subHeader, .racingItems {
     width: 100%;
-    border: 2px solid black;
+    max-width: 800px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
