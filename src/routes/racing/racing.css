@@ -13,3 +13,7 @@
     flex-direction: column;
     justify-content: center;
 }
+
+.headerTitle {
+    margin: 0 26% 10px 0;
+}

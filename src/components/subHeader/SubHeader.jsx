@@ -1,18 +1,38 @@
-import React from 'react'
-import './subHeader.css'
+import React, { useState } from 'react';
+import './subHeader.css';
 
 const SubHeader = ({ setActiveTab }) => {
-  
-    return (
-      <section className='subHeaderSection'>
-        <nav>
-          <button onClick={() => setActiveTab('proximas')}>Próximas</button>
-          <button onClick={() => setActiveTab('passadas')}>Passadas</button>
-          <button onClick={() => setActiveTab('canceladas')}>Canceladas</button>
-        </nav>
-      </section>
-      
-    );
+  const [activeButton, setActiveButton] = useState('proximas');
+
+  const handleClick = (tab) => {
+    setActiveTab(tab);
+    setActiveButton(tab);
   };
 
-export default SubHeader
+  return (
+    <section className='subHeaderSection'>
+      <nav>
+        <button
+          className={activeButton === 'proximas' ? 'active' : ''}
+          onClick={() => handleClick('proximas')}
+        >
+          Próximas
+        </button>
+        <button
+          className={activeButton === 'passadas' ? 'active' : ''}
+          onClick={() => handleClick('passadas')}
+        >
+          Passadas
+        </button>
+        <button
+          className={activeButton === 'canceladas' ? 'active' : ''}
+          onClick={() => handleClick('canceladas')}
+        >
+          Canceladas
+        </button>
+      </nav>
+    </section>
+  );
+};
+
+export default SubHeader;

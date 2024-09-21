@@ -1,24 +1,34 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { NavLink, useNavigate } from 'react-router-dom';
 import logo from '../../assets/image/logo.png';
 import './header.css';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <header>
       <img src={logo} alt="logo" id='logo'/>
       <nav className={`navItems ${isOpen && "open"}`}>
-        <a href="/home">Home</a>
-        <a href="/about">About</a>
-        <a href="/service">Leaderboard</a>
-        <a href="/contact">Contact</a>
+        <ul>
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/racing">Racing</NavLink>
+          </li>
+          <li>
+            <NavLink to="/leaderboard">Leaderboard</NavLink>
+          </li>
+        </ul>
       </nav>
       <button
         className="loginButton"
-        onClick={() => alert('Login clicked!')}>
+        onClick={() => navigate('/login')}
+      >
         Login
       </button>
       <button

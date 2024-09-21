@@ -9,9 +9,14 @@
 }
 
 .subHeaderSection nav button {
-    background-color: var(--color-1);
+    background-color: var(--color-2);
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subHeaderSection nav button.active {
+    background-color: var(--color-1);
 }
