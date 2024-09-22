@@ -36,7 +36,7 @@ const Racing = () => {
 
   return (
     <section className="racingSection">
-      <div>
+      <div className='headerTitle'>
         <h1>Corridas</h1>
         <p>Veja os detalhes das corridas que já acabaram e das que estão por vir!</p>
       </div>
