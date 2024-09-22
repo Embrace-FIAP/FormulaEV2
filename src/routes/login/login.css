@@ -14,10 +14,18 @@
     padding: 10px 0 0 15px;
 }
 
+.headerContainer {
+    margin-top: -20px;
+}
+
 #logoBlack {
     position: relative;
     width: 30px;
     height: 35px;
+}
+
+#logoGoogle {
+    margin: 0 10px -7px 0;
 }
 
 .loginSection h1 {
@@ -31,7 +39,7 @@
 
 .loginContent {
     width: 40%;
-    height: 70%;
+    height: 75%;
     border-radius: 5px;
     background-color: var(--color-1);
     display: flex;
@@ -43,4 +51,70 @@
 .formGroup {
     display: flex;
     flex-direction: column;
+}
+
+.formGroup label {
+    color: var(--color-label);
+    margin-bottom: 5px;
+}
+
+.formGroup input {
+    width: 23rem;
+    height: 2.2rem;
+    margin-bottom: 35px;
+    border-radius: 5px;
+    border: 1px solid var(--color-2);
+    padding-right: 2.5rem; /* Espaço para o ícone */
+}
+
+.passwordWrapper {
+    position: relative;
+}
+
+.passwordWrapper input {
+    width: 100%;
+    padding-right: 2.5rem; /* Adiciona espaço para o ícone de olho */
+}
+
+.togglePassword {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--color-label);
+}
+
+.togglePassword:focus {
+    outline: none;
+}
+
+.buttonsGroup button {
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    width: 23rem;
+    height: 2.3rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#buttonEnter {
+    background-color: var(--color-button);
+    color: var(--color-1);
+}
+
+#buttonGoogle {
+    background-color: var(--color-1);
+    border: 1px solid var(--color-2);
+}
+
+hr {
+    height: 1.9px;
+    margin: 20px 0;
+    background-color: var(--color-2);
+    border: none;
 }
