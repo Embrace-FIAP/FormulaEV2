@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { NavLink, useNavigate } from 'react-router-dom';
-import logo from '../../assets/image/logo.png';
+import logo from '../../assets/image/logoWhite.png';
 import './header.css';
 
 const Header = () => {
@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <header>
-      <img src={logo} alt="logo" id='logo'/>
+      <img src={logo} alt="logo" id='logoWhite'/>
       <nav className={`navItems ${isOpen && "open"}`}>
         <ul>
           <li>

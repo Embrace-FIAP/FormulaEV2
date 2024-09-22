@@ -6,9 +6,9 @@ header {
   background: var(--gradient-purple);
 }
 
-#logo {
+#logoWhite {
   margin: 15px;
-  width: 50px;
+  width: 35px;
   height: auto;
 }
 

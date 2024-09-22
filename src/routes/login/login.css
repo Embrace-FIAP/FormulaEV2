@@ -1,0 +1,46 @@
+.loginSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    background-color: var(--color-2);
+}
+
+.logoWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0 0 15px;
+}
+
+#logoBlack {
+    position: relative;
+    width: 30px;
+    height: 35px;
+}
+
+.loginSection h1 {
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.loginContent {
+    width: 40%;
+    height: 70%;
+    border-radius: 5px;
+    background-color: var(--color-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
