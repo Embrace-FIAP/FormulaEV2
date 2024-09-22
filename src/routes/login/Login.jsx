@@ -1,13 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react';
 import logo from '../../assets/image/logoBlack.png';
-import './login.css'
+import logoGoogle from '../../assets/image/logoGoogle.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from 'react-router-dom';
+import './login.css';
 
 const Login = () => {
+    const [passwordVisible, setPasswordVisible] = useState(false);
+
+    const togglePasswordVisibility = () => {
+        setPasswordVisible(!passwordVisible);
+    };
+
     return (
         <>
             <section className='loginSection'>
                 <div className='logoWrapper'>
-                    <img src={logo} alt="logo" id='logoBlack'/>
+                    <NavLink to="/">
+                        <img src={logo} alt="logo" id='logoBlack'/>
+                    </NavLink>
                 </div>
 
                 <div className='headerContainer'>
@@ -17,25 +29,38 @@ const Login = () => {
                 <div className='loginContent'>
                     <form action="">
                         <div className='formGroup'>
-                            <label htmlFor="">Nome do Usuário</label>
-                            <input type="text" />
+                            <label htmlFor="username">Nome do Usuário</label>
+                            <input type="text" id="username" />
                         </div>
 
-                        <div className='formGroup'>
-                            <label htmlFor="">Senha</label>
-                            <input type="text" />
+                        <div className='formGroup passwordWrapper'>
+                            <label htmlFor="password">Senha</label>
+                            <input
+                                type={passwordVisible ? "text" : "password"}
+                                id="password"
+                            />
+                            <button
+                                type="button"
+                                className="togglePassword"
+                                onClick={togglePasswordVisibility}
+                            >
+                                <FontAwesomeIcon icon={passwordVisible ? faEye : faEyeSlash} />
+                            </button>
                         </div>
 
-                        <div>
-                            <button>Entrar</button>
+                        <div className='buttonsGroup'>
+                            <button id='buttonEnter'>Entrar</button>
                             <hr />
-                            <button>Fazer login com Google</button>
+                            <button id='buttonGoogle'>
+                                <img src={logoGoogle} alt="logo" id='logoGoogle'/>
+                                Fazer login com Google
+                            </button>
                         </div>
                     </form>
                 </div>
             </section>
         </>
-    )
-}
+    );
+};
 
-export default Login
+export default Login;
