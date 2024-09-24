@@ -1,4 +1,5 @@
 import React from 'react';
+import './leaderboard.css';
 
 const Leaderboard = () => {
     const Races = [
@@ -30,59 +31,54 @@ const Leaderboard = () => {
     ];    
 
     return (
-        <>
-            <section>
-                <div className='headerTitle'>
-                    <h1>Placar de Líderes</h1>
-                    <p>Saiba quem são os maiores vencedores e qual sua posição no placar.</p>
+        <section className='leaderboardSection'>
+            <div className='leftSection'>
+                <div className='bestPilots'>
+                    <h2>Melhores Pilotos do Ano</h2>
+                    {annualBestPilots.map(pilot => (
+                        <div key={pilot.id} className='pilot'>
+                            <span>{pilot.name}</span>
+                            <span>Pontos: {pilot.points}</span>
+                        </div>
+                    ))}
                 </div>
-
-                <div>
-                    <div className='bestPilots'>
-                        <h2>Melhores Pilotos do Ano</h2>
-                        {annualBestPilots.map(pilot => (
-                            <div key={pilot.id} className='pilot'>
-                                <span>{pilot.name}</span>
-                                <span>Pontos: {pilot.points}</span>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className='featuredUsers'>
-                        <h2>Usuários em Destaque</h2>
-                        {users.map(user => (
-                            <div key={user.id} className='user'>
-                                <span>{user.name} - {user.turn}</span>
-                                <span>Pontos: {user.points}</span>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className='personalProfile'>
-                        <h2>Seu Perfil</h2>
-                        {profile.map(userProfile => (
-                            <div key={userProfile.id} className='profile'>
-                                <span>{userProfile.name} - {userProfile.turn}</span>
-                                <span>Pontos: {userProfile.points}</span>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className='nextRaces'>
-                        <h2>Próximas Corridas</h2>
-                        {Races.map(race => (
-                            <div key={race.id} className='race'>
-                                <span>{race.date} ({race.day})</span>
-                                <span>Hora: {race.hour}</span>
-                                <span>Localidade: {race.locality}</span>
-                                <span>Aposta: {race.bet ? 'Sim' : 'Não'}</span>
-                            </div>
-                        ))}
-                    </div>
+            </div>
+    
+            <div className='rightSection'>
+                <div className='featuredUsers'>
+                    <h2>Usuários em Destaque</h2>
+                    {users.map(user => (
+                        <div key={user.id} className='user'>
+                            <span>{user.name} - {user.turn}</span>
+                            <span>Pontos: {user.points}</span>
+                        </div>
+                    ))}
                 </div>
-            </section>
-        </>
-    );
+    
+                <div className='personalProfile'>
+                    <h2>Seu Perfil</h2>
+                    {profile.map(userProfile => (
+                        <div key={userProfile.id} className='profile'>
+                            <span>{userProfile.name} - {userProfile.turn}</span>
+                            <span>Pontos: {userProfile.points}</span>
+                        </div>
+                    ))}
+                </div>
+    
+                <div className='nextRaces'>
+                    <h2>Próximas Corridas</h2>
+                    {Races.map(race => (
+                        <div key={race.id} className='race'>
+                            <span>{race.date} ({race.day})</span>
+                            <span>Hora: {race.hour}</span>
+                            <span>Localidade: {race.locality}</span>
+                            <span>Aposta: {race.bet ? 'Sim' : 'Não'}</span>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );    
 };
 
 export default Leaderboard;

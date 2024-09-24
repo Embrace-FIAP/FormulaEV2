@@ -93,13 +93,9 @@
 }
 
 .buttonsGroup button {
-    border: none;
-    border-radius: 5px;
     padding: 0.5rem 1rem;
     width: 23rem;
     height: 2.3rem;
-    font-weight: 500;
-    cursor: pointer;
 }
 
 #buttonEnter {
