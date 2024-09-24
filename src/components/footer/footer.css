@@ -1,66 +1,115 @@
 footer {
-    background: var(--gradient-purple) ;
+    background: var(--gradient-purple);
     color: var(--color-1);
     padding: 20px;
 }
 
-.footer-content {
+.footerContent {
     display: flex;
     justify-content: space-around; 
 }
 
-.footer-section {
+#logoFooter {
+    margin: 0 0 10px -230px;
+    height: 40px;
+    width: 40px;
+}
+
+.footerSection {
     flex: 1;
-    padding: 0 15px;
     text-align: center;
+    padding: 25px;
 }
 
-.footer-section h4 {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+.footerSection h4 {
+    font-size: 1rem;
+    margin: 1.5rem 0 2rem 0;
 }
 
-.footer-section ul {
+.footerSection ul {
     list-style: none;
     padding: 0;
     margin: 0 auto; 
     width: fit-content; 
 }
 
-.footer-section ul li {
-    margin-bottom: 8px;
+.footerSection p {
+    margin-top: -1.7rem;
+}
+
+.footerSection ul li,
+.footerSection p {
+    margin-bottom: 1rem;
     text-align: start;
     transition: transform 0.5s ease; 
     cursor: pointer;
 }
 
-.footer-section ul li:hover {
+.footerSection ul li:hover {
     transform: translateX(-8px);
     color: var(--color-3);
 }
 
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.line {
+    height: 1.5px;
+    width: 100%;
+    background-color: var(--color-1);
+    margin: 40px auto;
+}
+
 .copyright {
-    text-align: center;
-    margin-top: 20px;
+    flex: 1;
+}
+
+.copyright h5 {
+    font-weight: 500;
+}
+
+.policiesAndTerms {
+    display: flex;
+    gap: 15px;
+    flex: 1;
+    justify-content: flex-end;
+    gap: 100px;
+}
+
+.policiesAndTerms p {
+    font-size: 13px;
 }
 
 @media (max-width: 781px) {
-    .footer-content {
+    .footerContent {
         flex-direction: column;
         align-items: center;
     }
 
-    .footer-section {
+    .footerSection {
         max-width: 100%;
         padding: 10px 0;
         text-align: center;
     }
 
-    .footer-section h4 {
+    .footerSection h4 {
         margin-bottom: 5px;
     }
 
-    .footer-section ul li {
+    .footerSection ul li {
         margin-bottom: 3px;
+    }
+
+    .footerBottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .policiesAndTerms {
+        justify-content: center;
     }
 }

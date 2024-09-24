@@ -6,7 +6,7 @@ header {
   background: var(--gradient-purple);
 }
 
-#logoWhite {
+#logoHeader {
   margin: 15px;
   width: 35px;
   height: auto;

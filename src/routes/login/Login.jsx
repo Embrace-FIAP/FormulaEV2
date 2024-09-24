@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import logo from '../../assets/image/logoBlack.png';
-import logoGoogle from '../../assets/image/logoGoogle.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
+import logo from '../../assets/image/logoBlack.png';
+import logoGoogle from '../../assets/image/logoGoogle.png';
 import './login.css';
 
 const Login = () => {
@@ -18,7 +18,7 @@ const Login = () => {
             <section className='loginSection'>
                 <div className='logoWrapper'>
                     <NavLink to="/">
-                        <img src={logo} alt="logo" id='logoBlack'/>
+                        <img src={logo} alt="logo" id='logoLogin'/>
                     </NavLink>
                 </div>
 
