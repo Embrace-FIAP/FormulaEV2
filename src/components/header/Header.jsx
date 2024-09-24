@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <header>
-      <img src={logo} alt="logo" id='logoWhite'/>
+      <img src={logo} alt="logo" id='logoHeader'/>
       <nav className={`navItems ${isOpen && "open"}`}>
         <ul>
           <li>
