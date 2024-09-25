@@ -1,0 +1,25 @@
+.leaderboardSection {
+    display: flex; 
+}
+
+.bestPilots {
+    height: 500px;
+    width: 250px;
+    flex-shrink: 0; 
+    border: 2.5px solid var(--color-2); 
+    padding: 10px;
+}
+
+.rightSection {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex-grow: 1;
+}
+
+.featuredUsers,
+.personalProfile,
+.nextRaces {
+    border: 2.5px solid var(--color-2);
+    padding: 10px;
+}

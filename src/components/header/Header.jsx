@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import logo from '../../assets/image/logoWhite.png';
 import './header.css';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const isHomePage = location.pathname === '/';
 
   return (
-    <header>
-      <img src={logo} alt="logo" id='logoHeader'/>
+    <header style={{ background: isHomePage ? '#020004' : 'var(--gradient-purple)' }}>
+      <img src={logo} alt="logo" id='logoHeader' />
       <nav className={`navItems ${isOpen && "open"}`}>
         <ul>
           <li>
