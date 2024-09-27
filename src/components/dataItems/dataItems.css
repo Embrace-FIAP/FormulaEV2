@@ -1,6 +1,6 @@
-.blockRacingItem {
-    width: 100%;
-    border: 2px solid var(--color-2);
+.blockDataItem {
     border-radius: 5px;
+    padding: 10px;
+    border: 2px solid var(--color-2);
     margin: 10px 0;
 }

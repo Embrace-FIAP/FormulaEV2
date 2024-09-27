@@ -1,4 +1,3 @@
-// SubHeader.jsx
 import React, { useState } from 'react';
 import './subHeader.css';
 

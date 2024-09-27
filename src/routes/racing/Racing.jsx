@@ -45,9 +45,9 @@ const Racing = () => {
 
       <div className="subHeader">
         <SubHeader tabs={tabOptions} setActiveTab={setActiveTab} />
+        <DataItems data={raceData[activeTab]} renderItem={renderRaceItem} />
       </div>
 
-      <DataItems data={raceData[activeTab]} renderItem={renderRaceItem} />
     </section>
   );
 };
