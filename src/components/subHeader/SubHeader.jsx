@@ -1,35 +1,26 @@
 import React, { useState } from 'react';
 import './subHeader.css';
 
-const SubHeader = ({ setActiveTab }) => {
-  const [activeButton, setActiveButton] = useState('proximas');
+const SubHeader = ({ tabs, setActiveTab }) => {
+  const [activeButton, setActiveButton] = useState(tabs[0].id);
 
-  const handleClick = (tab) => {
-    setActiveTab(tab);
-    setActiveButton(tab);
+  const handleClick = (tabId) => {
+    setActiveTab(tabId);
+    setActiveButton(tabId);
   };
 
   return (
     <section className='subHeaderSection'>
       <nav>
-        <button
-          className={activeButton === 'proximas' ? 'active' : ''}
-          onClick={() => handleClick('proximas')}
-        >
-          Próximas
-        </button>
-        <button
-          className={activeButton === 'passadas' ? 'active' : ''}
-          onClick={() => handleClick('passadas')}
-        >
-          Passadas
-        </button>
-        <button
-          className={activeButton === 'canceladas' ? 'active' : ''}
-          onClick={() => handleClick('canceladas')}
-        >
-          Canceladas
-        </button>
+        {tabs.map((tab) => (
+          <button
+            key={tab.id}
+            className={activeButton === tab.id ? 'active' : ''}
+            onClick={() => handleClick(tab.id)}
+          >
+            {tab.label}
+          </button>
+        ))}
       </nav>
     </section>
   );

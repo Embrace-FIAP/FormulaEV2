@@ -49,7 +49,7 @@ const Login = () => {
                         </div>
 
                         <div className='buttonsGroup'>
-                            <button id='buttonEnter'>Entrar</button>
+                            <button className='darkButton'>Entrar</button>
                             <hr />
                             <button id='buttonGoogle'>
                                 <img src={logoGoogle} alt="logo" id='logoGoogle'/>

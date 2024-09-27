@@ -1,11 +1,15 @@
+.subHeaderSection {
+    color: var(--color-3);
+}
+
 .subHeaderSection nav {
-    width: 40%;
     background-color: var(--color-2);
     padding: 8px 5px;
     border-radius: 5px;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     gap: 10px;
+    margin: 10px 0;
 }
 
 .subHeaderSection nav button {

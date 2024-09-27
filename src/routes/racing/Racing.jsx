@@ -1,38 +1,40 @@
 import React, { useState } from 'react';
-import NavTabs from '../../components/subHeader/SubHeader';
-import RacingItems from '../../components/racingItems/RacingItems';
+import SubHeader from '../../components/subHeader/SubHeader';
+import DataItems from '../../components/dataItems/DataItems';
 import '../../styles/index.css';
 import './racing.css';
 
-const nextRaces = [
-  { id: 1, date: '17/09/2024', day: 'Ter', hour: '19:00 - 21:00', locality: '', bet: true },
-  { id: 2, date: '17/09/2024', day: 'Ter', hour: '19:00 - 21:00', locality: '', bet: true },
-];
+const raceData = {
+  proximas: [
+    { id: 1, day: 'Ter', hour: '19:00 - 21:00', bet: true },
+    { id: 2, day: 'Ter', hour: '19:00 - 21:00', bet: true },
+  ],
+  passadas: [
+    { id: 1, day: 'Seg', hour: '19:00 - 21:00', bet: false },
+    { id: 2, day: 'Seg', hour: '19:00 - 21:00', bet: false },
+  ],
+  canceladas: [
+    { id: 1, day: 'Dom', hour: '19:00 - 21:00', bet: false },
+    { id: 2, day: 'Dom', hour: '19:00 - 21:00', bet: false }, 
+  ],
+};
 
-const pastRaces = [
-  { id: 1, date: '16/09/2024', day: 'Seg', hour: '19:00 - 21:00', locality: '', bet: false },
-  { id: 2, date: '16/09/2024', day: 'Seg', hour: '19:00 - 21:00', locality: '', bet: false },
-];
-
-const canceledRaces = [
-  { id: 1, date: '15/09/2024', day: 'Dom', hour: '19:00 - 21:00', locality: '', bet: false },
-  { id: 1, date: '15/09/2024', day: 'Dom', hour: '19:00 - 21:00', locality: '', bet: false },
+const tabOptions = [
+  { id: 'proximas', label: 'Próximas' },
+  { id: 'passadas', label: 'Passadas' },
+  { id: 'canceladas', label: 'Canceladas' },
 ];
 
 const Racing = () => {
   const [activeTab, setActiveTab] = useState('proximas');
 
-  const getData = () => {
-    switch (activeTab) {
-      case 'passadas':
-        return pastRaces;
-      case 'canceladas':
-        return canceledRaces;
-      case 'proximas':
-      default:
-        return nextRaces;
-    }
-  };
+  const renderRaceItem = (item) => (
+    <>
+      <h3>{item.day}</h3>
+      <p>{item.hour}</p>
+      {item.bet ? <p>Apostas abertas</p> : <p>Sem apostas</p>}
+    </>
+  );
 
   return (
     <section className="racingSection">
@@ -42,10 +44,10 @@ const Racing = () => {
       </div>
 
       <div className="subHeader">
-        <NavTabs setActiveTab={setActiveTab} />
+        <SubHeader tabs={tabOptions} setActiveTab={setActiveTab} />
+        <DataItems data={raceData[activeTab]} renderItem={renderRaceItem} />
       </div>
 
-      <RacingItems data={getData()} />
     </section>
   );
 };
