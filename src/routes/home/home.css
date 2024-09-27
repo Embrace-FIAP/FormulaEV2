@@ -1,4 +1,76 @@
+.homeSection, 
+.productSection {
+    height: 100vh;
+    display: flex;
+}
+
+.homeSection .lightButton,
+.productSection .darkButton {
+    padding: 10px 15px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
 .homeSection {
     background: var(--gradient-purple);
     color: var(--color-1);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.homeSection h1 {
+    margin-top: -20px;
+    font-size: 40px;
+}
+
+.homeSection p {
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.productSection {
+    background: var(--color-2);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.productContent {
+    background: var(--color-1);
+    width: 85%; 
+    height: 85%; 
+    display: flex; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-justify: center; 
+    align-items: center; 
+}
+
+.productContent .leftSection {
+    text-align: center;
+    padding: 20px; 
+}
+
+.productContent .leftSection > :first-child {
+    font-weight: 700;
+}
+
+.productContent .leftSection h2 {
+    font-size: 40px;
+}
+
+.productContent .leftSection button {
+    margin: 30px 0 50px 0;
+}
+
+.productSection .rightSection {
+    background-image: url('../../assets/image/car.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    width: 70%;
+    height: 100%;
+    border-radius: 8px;
 }

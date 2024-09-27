@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink} from 'react-router-dom';
 import logo from '../../assets/image/logoWhite.png';
 import './footer.css'
 
@@ -35,9 +36,15 @@ const Footer = () => {
                     <div className="footerSection">
                         <h4>Social</h4>
                         <ul>
-                            <li>Instagram</li>
-                            <li>Youtube</li>
-                            <li>Facebook</li>
+                            <li>
+                                <NavLink to="https://www.youtube.com/@FIAFormulaE">Youtube</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="https://www.instagram.com/fiaformulae/">Instagram</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="https://www.facebook.com/fiaformulae/">Facebook</NavLink>
+                            </li>
                         </ul>
                     </div>
                 </div>

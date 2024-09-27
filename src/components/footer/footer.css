@@ -47,7 +47,7 @@ footer {
 
 .footerSection ul li:hover {
     transform: translateX(-8px);
-    color: var(--color-3);
+    color: rgb(223, 217, 217);
 }
 
 .footerBottom {

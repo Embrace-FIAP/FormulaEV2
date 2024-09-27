@@ -1,3 +1,7 @@
+.subHeaderSection {
+    color: var(--color-3);
+}
+
 .subHeaderSection nav {
     width: 40%;
     background-color: var(--color-2);
