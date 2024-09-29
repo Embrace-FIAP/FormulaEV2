@@ -84,6 +84,11 @@ footer {
     font-size: 13px;
 }
 
+.links {
+    text-decoration: none; 
+    color: inherit;
+}
+
 @media (max-width: 781px) {
     .footerContent {
         flex-direction: column;

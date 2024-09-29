@@ -17,3 +17,36 @@
 .headerTitle {
     margin: 0 26% 10px 5%;
 }
+
+.racerItem {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--color-label);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#dayMonth {
+    font-weight: 700;
+    font-size: 35px;
+    transition: 0.2s;
+}
+
+#dayWeek {
+    transition: 0.2s;
+}
+
+#locate svg {
+    margin-right: 10px;
+}
+
+#locate, #bet {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.racerItem button {
+    padding: 8px 15px;
+}
