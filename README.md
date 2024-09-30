@@ -8,6 +8,9 @@
 - **Simulação de Corrida 2D**: Um jogo de simulação de corrida 2D da Fórmula E disponível para download, onde os usuários podem competir com outros e melhorar sua posição no placar.
 - **Design Responsivo**: O site é totalmente responsivo, garantindo uma excelente experiência do usuário tanto em dispositivos desktop quanto móveis.
 
+## Biblioteca
+npm install @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons @fortawesome/free-regular-svg-icons
+
 ## Uso
 
 ### Página Inicial
