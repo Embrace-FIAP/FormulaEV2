@@ -37,13 +37,13 @@ const Footer = () => {
                         <h4>Social</h4>
                         <ul>
                             <li>
-                                <NavLink to="https://www.youtube.com/@FIAFormulaE">Youtube</NavLink>
+                                <NavLink to="https://www.youtube.com/@FIAFormulaE" className='links'>Youtube</NavLink>
                             </li>
                             <li>
-                                <NavLink to="https://www.instagram.com/fiaformulae/">Instagram</NavLink>
+                                <NavLink to="https://www.instagram.com/fiaformulae/" className='links'>Instagram</NavLink>
                             </li>
                             <li>
-                                <NavLink to="https://www.facebook.com/fiaformulae/">Facebook</NavLink>
+                                <NavLink to="https://www.facebook.com/fiaformulae/" className='links'>Facebook</NavLink>
                             </li>
                         </ul>
                     </div>

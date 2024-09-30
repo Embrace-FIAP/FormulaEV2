@@ -18,7 +18,10 @@ const Home = () => {
                         <p>Simulação de Corrida 2D</p>
                         <h2>Nossa Simulação</h2>
                         <p>Faça o download e junte-se à nossa comunidade de pilotos, competindo com pessoas de todos os países ao redor do mundo. Mostre suas habilidades e participe de eventos emocionantes!</p>
-                        <button className='darkButton'>Download</button>
+                        <a href="/downloads/Car-Racing-Game-main.zip" download>
+                            <button className='darkButton'>Download</button>
+                        </a>
+                        
                         <p>O <span>Placar de Líderes</span> exibe os melhores pilotos do mês, 
                         ano e de todos os tempos. Confira!</p>
                     </div>

@@ -1,25 +1,96 @@
-.leaderboardSection {
-    display: flex; 
+#pilotItem {
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-between;
+}
+
+.leaderboardContent {
+    display: flex;
+    padding: 30px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.leaderboardContent h2 {
+    font-size: 16.5px;
 }
 
 .bestPilots {
-    height: 500px;
-    width: 250px;
+    height: 515px;
+    width: 330px;
     flex-shrink: 0; 
     border: 2.5px solid var(--color-2); 
-    padding: 10px;
+    border-radius: 5px;
+    padding: 20px;
 }
 
-.leaderboardSection .rightSection {
+.leaderboardContent .rightSection {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    flex-grow: 1;
+    gap: 10px;
 }
 
 .featuredUsers,
 .personalProfile,
 .nextRaces {
     border: 2.5px solid var(--color-2);
-    padding: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column; 
+}
+
+.featuredUsers h2,
+.personalProfile h2,
+.nextRaces h2 {
+    margin-bottom: 15px;
+} 
+
+#featuredUsersContent {
+    display: flex;
+    justify-content: space-around;
+    gap: 80px;
+}
+
+.personalProfile {
+    width: 400px;
+}
+
+.gamerpic {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.userContent {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.userDetails {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.userName {
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+
+.userStats {
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.points {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.lap {
+    font-size: 0.9rem;
 }
