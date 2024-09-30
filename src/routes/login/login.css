@@ -114,3 +114,9 @@ hr {
     background-color: var(--color-2);
     border: none;
 }
+
+@media (max-width: 700px) {
+    .loginSection {
+        background-color: var(--color-1);
+    }
+}

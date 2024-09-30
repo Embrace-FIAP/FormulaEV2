@@ -104,6 +104,15 @@ header {
     color: #ffffff;
     font-size: 24px;
     border: none;
-    background: var(--gradient-purple);
+    background: #020004;
+  }
+
+  .loginButton {
+    display: none; 
+  }
+
+  .navItems.open + .loginButton {
+    display: block;
+    margin: 15px;
   }
 }

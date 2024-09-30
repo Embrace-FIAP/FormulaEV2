@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <header style={{ background: isHomePage ? '#020004' : 'var(--gradient-purple)' }}>
       <img src={logo} alt="logo" id='logoHeader' />
-      <nav className={`navItems ${isOpen && "open"}`}>
+      <nav className={`navItems ${isOpen ? "open" : ""}`}>
         <ul>
           <li>
             <NavLink to="/">Home</NavLink>
