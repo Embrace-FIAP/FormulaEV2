@@ -52,7 +52,7 @@ const Leaderboard = () => {
 
   return (
     <section className='leaderboardSection'>
-      <div>
+      <div className='leaderboardHeader'>
         <h1>Placar de Líderes</h1>
         <p>Saiba quem são os maiores vencedores e qual sua posição no placar.</p>
       </div>

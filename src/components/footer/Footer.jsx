@@ -12,7 +12,7 @@ const Footer = () => {
                         <h4 className='titleFooter'>
                             <img src={logo} alt="logo" id='logoFooter'/>
                         </h4>
-                        <p>Nossa visão é proporcionar interatividade e diversão para todos os amantes de corrida.</p>
+                        <p id='summary'>Nossa visão é proporcionar interatividade e diversão para todos os amantes de corrida.</p>
                     </div>
 
                     <div className="footerSection">

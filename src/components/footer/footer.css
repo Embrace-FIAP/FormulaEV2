@@ -90,6 +90,12 @@ footer {
 }
 
 @media (max-width: 781px) {
+    #logoFooter {
+        margin: 0 auto;
+        height: 50px;
+        width: 50px;
+    }
+
     .footerContent {
         flex-direction: column;
         align-items: center;
@@ -114,7 +120,11 @@ footer {
         align-items: center;
     }
 
+    #summary {
+        display: none;
+    }
+
     .policiesAndTerms {
-        justify-content: center;
+        display: none;
     }
 }
