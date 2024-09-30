@@ -54,7 +54,7 @@ const Racing = () => {
           <p>Aposta Total:</p>
           <p>
             {item.bet}
-            <FontAwesomeIcon icon={faBolt} />
+            <FontAwesomeIcon icon={faBolt}/>
           </p>
         </div>
 
