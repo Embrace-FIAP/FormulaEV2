@@ -1,54 +1,12 @@
-```markdown
-# Site de Simulação de Corrida Formula E
-
-Bem-vindo ao **site de Simulação de Corrida Formula E**! Esta aplicação web, construída com **React**, permite que os usuários explorem as corridas futuras, vejam o placar de líderes do jogo de simulação 2D da Fórmula E e façam o download do jogo para competir com jogadores ao redor do mundo.
-
-## Tabela de Conteúdos
-- [Recursos](#recursos)
-- [Instalação](#instalação)
-- [Uso](#uso)
-- [Placar de Líderes](#placar-de-líderes)
-- [Próximas Corridas](#próximas-corridas)
-- [Baixar o Jogo](#baixar-o-jogo)
-- [Contribuindo](#contribuindo)
-- [Licença](#licença)
+# Formula E Game Site
 
 ## Recursos
 
-- **Página Inicial**: Uma página de boas-vindas que introduz a simulação de Fórmula E e permite que os usuários explorem os recursos do site.
-- **Próximas Corridas**: Veja informações detalhadas sobre as próximas corridas de Fórmula E, incluindo data, horário, local e total de apostas.
-- **Placar de Líderes**: Um placar em tempo real mostrando os melhores pilotos com base em pontos e voltas corridas no jogo de simulação 2D.
+- **Home**: Uma página de boas-vindas que introduz a simulação de Fórmula E e permite que os usuários explorem os recursos do site.
+- **Racing**: Veja informações detalhadas sobre as próximas corridas de Fórmula E, incluindo data, horário, local e total de apostas.
+- **Leaderboard**: Um placar em tempo real mostrando os melhores pilotos com base em pontos e voltas corridas no jogo de simulação 2D.
 - **Simulação de Corrida 2D**: Um jogo de simulação de corrida 2D da Fórmula E disponível para download, onde os usuários podem competir com outros e melhorar sua posição no placar.
 - **Design Responsivo**: O site é totalmente responsivo, garantindo uma excelente experiência do usuário tanto em dispositivos desktop quanto móveis.
-
-## Instalação
-
-Para rodar este projeto localmente, siga estes passos:
-
-1. Clone o repositório:
-
-   ```bash
-   git clone https://github.com/seu-usuario/FormulaEV2-main.git
-   ```
-
-2. Navegue até o diretório do projeto:
-
-   ```bash
-   cd FormulaEV2-main
-   ```
-
-3. Instale as dependências:
-
-   ```bash
-   npm install
-   ```
-
-4. Inicie o servidor de desenvolvimento:
-
-   ```bash
-   npm start
-   ```
-
 
 ## Uso
 
