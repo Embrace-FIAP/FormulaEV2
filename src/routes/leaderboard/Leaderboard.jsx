@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot, faClock, faBolt } from '@fortawesome/free-solid-svg-icons';
+import axios from "axios";
 import SubHeader from '../../components/subHeader/SubHeader';
 import DataItems from '../../components/dataItems/DataItems';
 import gamerpic1 from '../../assets/image/randomGamerpic01.jpg';
@@ -41,7 +42,25 @@ const races = [
 ];
 
 const Leaderboard = () => {
+  const [user, setUser] = useState([]);
+  const [loading, setLoading] = useState([true]);
   const [activeTab, setActiveTab] = useState('monthly');
+
+  useEffect(() => {
+    axios.get('https://jsonplaceholder.typicode.com/users')
+    .then(response => {
+      setUser(response.data);
+      setLoading(false);
+    })
+    .catch(error => {
+      console.error(error);
+      setLoading(false);
+    });
+  }, []);
+
+  if(loading) {
+    return <p>Carregando...</p>
+  }
 
   const renderPilotItem = (pilot) => (
     <div id='pilotItem'>
@@ -149,6 +168,16 @@ const Leaderboard = () => {
                 </div>
               ))}
             </div>
+          </div>
+
+          <div>
+            <h1>Teste</h1>
+      
+            <ul>
+              {user.map(user => (
+                <li key={user.id}>{user.name}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
