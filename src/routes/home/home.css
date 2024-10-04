@@ -76,6 +76,14 @@
 }
 
 @media (max-width: 700px) {
+    .homeSection {
+        padding: 0 10px;
+    }
+
+    .homeSection h1 {
+        font-size: 35px;
+    }
+
     .productContent .rightSection {
         display: none;
     }

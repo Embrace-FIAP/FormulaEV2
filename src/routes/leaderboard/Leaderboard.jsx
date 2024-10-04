@@ -47,7 +47,7 @@ const Leaderboard = () => {
   const [activeTab, setActiveTab] = useState('monthly');
 
   useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/users')
+    axios.get('#')
     .then(response => {
       setUser(response.data);
       setLoading(false);
@@ -122,13 +122,21 @@ const Leaderboard = () => {
                     <p className="userName">{profile.name}</p>
                   </div>
                 </div>
-                <div className='userStats'>
-                  <p className="points">
+                <div className='footerUserContent'>
+                  <div className='userStats'>
+                    <p className="points">
                     {profile.points}
                     <FontAwesomeIcon icon={faBolt} />
-                  </p>
-                  <p className="lap">Voltas: {profile.lap}</p>
+                    </p>
+                    <p className="lap">Voltas: {profile.lap}</p>
+                  </div>
+
+                  <div>
+                    <button className='darkButton'>Ver mais</button>
+                  </div>
+
                 </div>
+
               </div>
             ))}
           </div>
@@ -170,15 +178,6 @@ const Leaderboard = () => {
             </div>
           </div>
 
-          <div>
-            <h1>Teste</h1>
-      
-            <ul>
-              {user.map(user => (
-                <li key={user.id}>{user.name}</li>
-              ))}
-            </ul>
-          </div>
         </div>
       </div>
     </section>
