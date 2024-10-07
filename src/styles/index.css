@@ -9,7 +9,7 @@
     --color-label: #595D63;
     --color-span: #002B6D;
     
-    --gradient-purple: linear-gradient(180deg, #020004 35%, #09051F 100%);
+    --gradient-purple: linear-gradient(180deg, #020004 35%,  #09051F 100%);
     --gradient-purple-responsive: linear-gradient(180deg, #09051F 35%, #020004 100%);
 }
 
