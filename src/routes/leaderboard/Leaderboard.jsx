@@ -4,33 +4,27 @@ import { faLocationDot, faClock, faBolt } from '@fortawesome/free-solid-svg-icon
 import axios from "axios";
 import SubHeader from '../../components/subHeader/SubHeader';
 import DataItems from '../../components/dataItems/DataItems';
+import './leaderboard.css';
+
 import gamerpic1 from '../../assets/image/randomGamerpic01.jpg';
 import gamerpic2 from '../../assets/image/randomGamerpic02.jpg';
 import gamerpic3 from '../../assets/image/randomGamerpic03.jpg';
+import gamerpic4 from '../../assets/image/randomGamerpic04.jpg';
+import gamerpic5 from '../../assets/image/randomGamerpic05.jpg';
 import gamerpic6 from '../../assets/image/randomGamerpic06.jpg';
-import './leaderboard.css';
 
-const monthlyBestPilots = [
-  { id: 1, name: 'João Silva', points: 300 },
-  { id: 2, name: 'Carlos Pereira', points: 250 },
-  { id: 3, name: 'Maria Oliveira', points: 230 },
-];
-
-const annualBestPilots = [
-  { id: 1, name: 'Lucas Santos', points: 1200 },
-  { id: 2, name: 'Ana Costa', points: 1150 },
-  { id: 3, name: 'Fernanda Lima', points: 1100 },
+const usersGamerpic = [
+  { id: 1, image: gamerpic1 },
+  { id: 2, image: gamerpic2 },
+  { id: 3, image: gamerpic3 },
+  { id: 4, image: gamerpic4 },
+  { id: 5, image: gamerpic5 },
+  { id: 6, image: gamerpic6 }
 ];
 
 const tabOptions = [
-  { id: 'monthly', label: 'Mensal' },
-  { id: 'annual', label: 'Anual' },
-];
-
-const users = [
-  { id: 1, name: 'João Silva', lap: 12, points: 150, ranking: 1, gamerpic: gamerpic1 },
-  { id: 2, name: 'Maria Oliveira', lap: 53, points: 200, ranking: 2, gamerpic: gamerpic2 },
-  { id: 3, name: 'Carlos Pereira', lap: 23, points: 120, ranking: 3, gamerpic: gamerpic3 },
+  { id: 'best', label: 'Melhores' },
+  { id: 'worst', label: 'Piores' },
 ];
 
 const profile = [
@@ -42,30 +36,42 @@ const races = [
 ];
 
 const Leaderboard = () => {
-  const [user, setUser] = useState([]);
-  const [loading, setLoading] = useState([true]);
-  const [activeTab, setActiveTab] = useState('monthly');
+  const [usersApi, setUsersApi] = useState([]);
+  const [topUsers, setTopUsers] = useState([]); 
+  const [loading, setLoading] = useState(true);
+  const [activeTab, setActiveTab] = useState('best');
 
   useEffect(() => {
-    axios.get('#')
-    .then(response => {
-      setUser(response.data);
-      setLoading(false);
-    })
-    .catch(error => {
-      console.error(error);
-      setLoading(false);
-    });
+    const apiUrl = activeTab === 'best' ? '/api/all_users_top' : '/api/all_users_bottom';
+    axios.get(apiUrl)
+      .then(response => {
+        setUsersApi(response.data);
+        setLoading(false);
+      })
+      .catch(error => {
+        console.error(error);
+        setLoading(false);
+      });
+  }, [activeTab]);
+
+  useEffect(() => {
+    axios.get('/api/top_users')
+      .then(response => {
+        setTopUsers(response.data);
+      })
+      .catch(error => {
+        console.error(error);
+      });
   }, []);
 
-  if(loading) {
-    return <p>Carregando...</p>
+  if (loading) {
+    return <p>Carregando...</p>;
   }
 
   const renderPilotItem = (pilot) => (
     <div id='pilotItem'>
-      <p>{pilot.name}</p>
-      <p>Pontos: {pilot.points}</p>
+      <p>{pilot.name_user}</p>
+      <p>Pontos: {pilot.speedpoints}</p>
     </div>
   );
 
@@ -79,10 +85,10 @@ const Leaderboard = () => {
       <div className='leaderboardContent'>
         <div className='leftSection'>
           <div className='bestPilots'>
-            <h2>Melhores Pilotos ({activeTab === 'monthly' ? 'Mensal' : 'Anual'})</h2>
+            <h2>Todos os Usuários</h2>
             <SubHeader tabs={tabOptions} setActiveTab={setActiveTab} />
             <DataItems
-              data={activeTab === 'monthly' ? monthlyBestPilots : annualBestPilots}
+              data={usersApi}
               renderItem={renderPilotItem}
             />
           </div>
@@ -92,20 +98,20 @@ const Leaderboard = () => {
           <div className='featuredUsers'>
             <h2>Usuários em Destaque</h2>
             <div id='featuredUsersContent'>
-              {users.map(user => (
-                <div key={user.id} className='user'>
+              {topUsers.map((userApi, index) => (
+                <div key={userApi.id} className='user'>
                   <div className='userContent'>
-                    <img src={user.gamerpic} alt="gamerpic" className='gamerpic' />
+                    <img src={usersGamerpic[index % usersGamerpic.length].image} alt="gamerpic" className='gamerpic' />
                     <div className="userDetails">
-                      <p className="userName">{user.name}</p>
+                      <p className="userName">{userApi.name_user}</p>
                     </div>
                   </div>
                   <div className='userStats'>
                     <p className="points">
-                      {user.points}
+                      {userApi.speedpoints}
                       <FontAwesomeIcon icon={faBolt} />
                     </p>
-                    <p className="lap">Voltas: {user.lap}</p>
+                    <p className="lap">Voltas: {userApi.total_laps}</p>
                   </div>
                 </div>
               ))}
@@ -125,8 +131,8 @@ const Leaderboard = () => {
                 <div className='footerUserContent'>
                   <div className='userStats'>
                     <p className="points">
-                    {profile.points}
-                    <FontAwesomeIcon icon={faBolt} />
+                      {profile.points}
+                      <FontAwesomeIcon icon={faBolt} />
                     </p>
                     <p className="lap">Voltas: {profile.lap}</p>
                   </div>
