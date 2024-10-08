@@ -30,33 +30,25 @@
     margin-bottom: 15px;
 }
 
-
 .productSection {
     background: var(--color-2);
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
     align-items: center; 
-    height: 100vh; 
 }
 
 .productContent {
     background: var(--color-1);
     width: 85%; 
-    max-width: 1200px; 
     height: 85%; 
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
+    display: flex; 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    margin: 0 auto; 
+    text-justify: center; 
+    align-items: center; 
 }
 
 .productContent .leftSection {
-    display: flex; 
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;
     text-align: center;
     padding: 20px; 
 }
@@ -73,20 +65,23 @@
     margin: 30px 0 50px 0;
 }
 
-.productContent .rightSection {
+.productSection .rightSection {
     background-image: url('../../assets/image/car.jpg'); 
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat; 
+    width: 70%;
+    height: 100%;
     border-radius: 8px;
-    width: 70%; 
-    height: 100%; 
-    margin-left: auto; 
 }
 
 @media (max-width: 700px) {
-    .productContent {
-        grid-template-columns: 1fr; 
+    .homeSection {
+        padding: 0 10px;
+    }
+
+    .homeSection h1 {
+        font-size: 35px;
     }
 
     .productContent .rightSection {

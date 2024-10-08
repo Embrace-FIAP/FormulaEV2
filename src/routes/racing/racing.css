@@ -22,7 +22,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    color: var(--color-label);
     font-weight: 600;
     cursor: pointer;
 }
@@ -49,4 +48,14 @@
 
 .racerItem button {
     padding: 8px 15px;
+}
+
+@media (max-width: 781px) {
+    .racerItem { 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 35px; 
+        justify-items: center; 
+        align-items: center; 
+    }
 }
