@@ -8,6 +8,7 @@
 
     --color-label: #595D63;
     --color-span: #002B6D;
+    --color-span-2: #3EC3DD;
     
     --gradient-purple: linear-gradient(180deg, #020004 35%,  #09051F 100%);
     --gradient-purple-responsive: linear-gradient(180deg, #09051F 35%, #020004 100%);
@@ -36,9 +37,20 @@ button {
 .lightButton {
     background-color: var(--color-1);
     color: var(--color-3);
+    border-radius: 24px;
+    transition: 0.2s;
+}
+
+.lightButton:hover {
+    background-color: var(--color-span-2);
+    color: var(--color-1);
 }
 
 span {
     color: var(--color-span);
     font-weight: 700;
+}
+
+.blue {
+    color: var(--color-span-2);
 }

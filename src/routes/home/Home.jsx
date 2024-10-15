@@ -1,15 +1,18 @@
 import React from 'react'
 import './home.css'
+import FormulaE from '../../assets/image/formulae.png'
 
 const Home = () => {
     return (
         <>
             <section className='homeSection'>
+                <div className='formula'>
+                    <h3>Bem-vindo à</h3>
+                    <img src={FormulaE} className='formulaImg' />
+                </div>
                 <div>
-                    <h1>Bem vindo a Formula E</h1>
-                    
-                    <p>Descubra nossa mais nova simulação de corrida.</p>
-                    <button className='lightButton'>Conhecer</button>
+                    <p>Compita na nossa mais nova <span className='blue'>simulação de corrida.</span></p>
+                    <button className='lightButton'>Iniciar</button>
                 </div>
             </section>
             <section className='productSection'>
